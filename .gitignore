@@ -1,0 +1,9 @@
+# Perl artifacts.
+*.pl
+*.pm
+*.pod
+*.t
+*.PL
+*.plx
+*.perl
+*.cgi
