@@ -1,3 +1,0 @@
-[submodule "exploit_research/zetachain/zc_exploit_research/lib/forge-std"]
-	path = exploit_research/zetachain/zc_exploit_research/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
