@@ -7,7 +7,7 @@
 - Critically, it supports minting of both typical LP positions.
 - Standard LP positions where liquidity is added to Uniswap and long positions where liquidity is burned.
 - Scoped code represents a subsection of the POp v1 protocol, but also serves as a standalone liquidity manager open for use by any entity.
-
+- //////////////////////////
 - Multi-leg strat: A strat that involves more than one trading action or order. e.g. instead of a singular transaction, a multi-leg position combines several trades into one composite strategy.
 - In multi-leg strats, each trade//leg plays a unique role.
 - The combined effect of the trades is designed to achieve a specific goal. e.g. Long straddle.
@@ -15,7 +15,7 @@
 - ERC-1155: Can represent both fungible tokens and NFT's, enables batch transfers of multiple token types in a single transaction, tokens are identified by a unique ID and stored together in a single contract unlike ERC-721 where each NFT is a separate contract, can embody conditional fungibility.
 - LP positions (adding liquidity): Providing liquidity to Uniswap by minting a new ERC-1155 representing a share of the LP pool.
 - Long positions (burning liquidity): taking a long position in expectation of asset value increase. Uniswap liquidity is burned?
-
+- ///////////////////////////
 - SFPM: engine that manages all USv3 positions.
 - F1/F2: Reentrancy lock.
 - F3: Initializes USv3 AMM pool in contract. Builds USv3 pool SFPM contract reverting if already init.
@@ -41,5 +41,8 @@
 - F23: Get account fees base. Return the feesBase associated with a given position.
 - F24: Get USv3 pool from id. Returns the USv3 pool for a given poolId.
 - F25: Get pool id. Returns the poolId for a given USv3 pool.
-
+- /////////////////////////////
+- Flow:
+- Options buyer/seller(mintOption/burnOption)(deposit/withdraw), Panoptic LP(deposit/withdraw)(delegate/revoke), Liquidator(forceExercise/liquidateAccount) -> POp pool(Deployed by: PanopticFactory.sol)(Collat tracking: ReceiptBase.sol). 
+- POp pool(mintTokenizedPosition/burnTokenizedPosition) -> SFPM.
 - 
