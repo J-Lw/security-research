@@ -44,5 +44,9 @@
 - /////////////////////////////
 - Flow:
 - Options buyer/seller(mintOption/burnOption)(deposit/withdraw), Panoptic LP(deposit/withdraw)(delegate/revoke), Liquidator(forceExercise/liquidateAccount) -> POp pool(Deployed by: PanopticFactory.sol)(Collat tracking: ReceiptBase.sol). 
-- POp pool(mintTokenizedPosition/burnTokenizedPosition) -> SFPM.
-- 
+- POp pool(mintTokenizedPosition/burnTokenizedPosition) -> SFPM(ERC-1155).
+- SFPM(mint/burn/collect) -> USv3 pool.
+- SFPM <- UniV3 LP(mintTokenizedPosition/burnTok...).
+- /////////////////////////////\
+- UniV3 LP(mint/collect, increaseLiquidity/decrLiq...) -> Uni NFPM(ERC-721).
+- Uni NFPM(mint, burn, collect) -> USv3 pool.
