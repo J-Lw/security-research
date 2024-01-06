@@ -1,3 +1,0 @@
-## Revolution Protocol
-
-- 
