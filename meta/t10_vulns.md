@@ -1,6 +1,5 @@
-## Meta
+## Top 10 vulns 2023
 
-#### Top 10 vulns 2023:
 - Price oracle manip.
 - Reward manip.
 - PK exposure.
